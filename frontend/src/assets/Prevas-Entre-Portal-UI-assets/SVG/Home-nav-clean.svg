@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lager_2" data-name="Lager 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1476.45 676.73">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #662d91;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #c47e6e;
+      }
+
+      .cls-3 {
+        fill: #ffaa01;
+      }
+
+      .cls-4 {
+        fill: #15484e;
+      }
+
+      .cls-5 {
+        fill: #b5b04d;
+      }
+
+      .cls-6 {
+        fill: #f96b1f;
+      }
+
+      .cls-7 {
+        fill: #ed3b21;
+      }
+
+      .cls-8 {
+        fill: #7ac943;
+      }
+
+      .cls-9 {
+        fill: #dd739f;
+      }
+
+      .cls-10 {
+        fill: #17a2cc;
+      }
+    </style>
+  </defs>
+  <g id="Lager_1-2" data-name="Lager 1">
+    <polygon class="cls-9" points="1111.49 676.61 1111.49 454.23 756.43 454.23 756.43 676.49 1111.49 676.61"/>
+    <rect class="cls-10" x="393.49" y="229.23" width="355.06" height="217.11"/>
+    <path class="cls-4" d="M385.6.58c-12.58.78-29.81,4.42-48.7,21.48L7,322.38c-4.33,4.01-7,9.7-7,15.98s2.67,11.97,7,15.98l329.9,300.32c18.89,17.06,36.12,20.7,48.7,21.48V.58Z"/>
+    <path class="cls-7" d="M393.49,221.34h355.06V.24l-353.8.12c-.41,0-.83,0-1.26,0v220.97Z"/>
+    <polygon class="cls-3" points="756.43 .24 756.43 221.34 1111.49 221.34 1111.49 .12 756.43 .24"/>
+    <path class="cls-8" d="M1119.38,221.34h357.07V22.06c0-12.18-10.13-22.06-22.62-22.06l-334.45.12v221.22Z"/>
+    <path class="cls-5" d="M748.54,454.23h-355.06v222.13c.43,0,.85,0,1.26,0l353.8.12v-222.26Z"/>
+    <rect class="cls-6" x="756.43" y="229.23" width="355.06" height="217.11"/>
+    <path class="cls-2" d="M1119.38,229.23v217.11h357.07v-217.11h-357.07Z"/>
+    <path class="cls-1" d="M1119.38,454.23v222.38l334.45.12c12.49,0,22.62-9.88,22.62-22.06v-200.44h-357.07Z"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lager_2" data-name="Lager 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.65 40.65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #999;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Lager_1-2" data-name="Lager 1">
+    <path class="cls-1" d="M0,22.87v-5.08h30.93S16.71,3.56,16.71,3.56l3.62-3.56,20.33,20.33-20.33,20.33-3.62-3.56,14.23-14.23H0Z"/>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #55c1d2;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#Namnlös_övertoning_20);
+        mix-blend-mode: multiply;
+        opacity: .5;
+      }
+
+      .cls-3 {
+        isolation: isolate;
+      }
+    </style>
+    <linearGradient id="Namnlös_övertoning_20" data-name="Namnlös övertoning 20" x1="800" y1="897.87" x2="800" y2="3.24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0071bc"/>
+      <stop offset=".19" stop-color="#0176bd"/>
+      <stop offset=".44" stop-color="#0785c1"/>
+      <stop offset=".71" stop-color="#0f9fc8"/>
+      <stop offset="1" stop-color="#1cc3d2"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-3">
+    <g id="Lager_2" data-name="Lager 2">
+      <g id="Lager_1-2" data-name="Lager 1">
+        <g>
+          <rect class="cls-1" width="1600" height="900"/>
+          <rect class="cls-2" width="1600" height="900"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

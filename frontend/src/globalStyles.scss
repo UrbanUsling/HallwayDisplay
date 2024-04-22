@@ -1,0 +1,1888 @@
+/* Import Rokkitt font */
+@import '../utils/colors.css';
+
+body {
+  font-family: 'Rokkitt', serif;
+}
+.text-medium {
+  font-weight: 500; // 500 corresponds to Medium
+}
+
+// Example class for headlines or subheadlines
+.headline, .subheadline {
+  font-weight: 500; // Medium weight for headlines/subheadlines
+}
+
+// If you're specifically targeting HTML headings like h1, h2, etc., you can do so directly
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500; // Medium weight for HTML heading elements
+}
+.material-icons {
+  font-family: 'Material Icons', serif;
+}
+
+
+.screensaver-backgroundImage {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure it stays behind other content */
+}
+
+
+@keyframes gripMotion {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.screensaver-robothand {
+  right: 1%;
+  position: fixed;
+  bottom: 0;
+  transform-origin: top left;  // Anpassa efter bildens ankarpunkt
+  animation: gripMotion 3s infinite ease-in-out;
+}
+.screensaver-logo{
+  width: 18%;
+  height: auto;
+  margin-bottom: 3%;
+  margin-top: 2%;
+}
+.screensaver-text1{
+  width: 40%;
+  height: auto;
+}
+.screensaver-text2{
+  width: 70%;
+  height: auto;
+}
+.screensaver-texts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px; /* Adjust the space between the images */
+}
+.screensaver-sections {
+  display: flex;
+  flex-direction: row;
+}
+@keyframes heartbeat {
+  0%, 12.5%, 100% {
+    transform: scale(1);  // Normal storlek
+  }
+  6.25%, 18.75% {
+    transform: scale(1.1);  // Hjärtat expanderar
+  }
+  12.5% {
+    transform: scale(0.9);  // Hjärtat drar ihop sig
+  }
+}
+
+.screensaver-klicka{
+  width: 35%;
+  height: auto;
+  margin-bottom: 5%;
+  animation: heartbeat 8s infinite ease-in-out;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--prevasBlue);
+  height: 15%; // Adjust to match your design
+}
+
+.header-text {
+  margin-left: 5%; // 2% from the left side
+  height: 60%; // It's better to control the size via width or a specific height
+  align-self: center; // Center vertically if needed
+
+}
+
+.header-icon {
+  display: inline-block; /* Ensure it's not display: none */
+  margin-right: 3%; // 2% from the right side
+  width: 50px; /* Adjust based on your icon size */
+  align-self: center; // Center vertically if needed
+
+}
+
+.event-image{
+  width: 150px;
+  height: auto;
+  margin-left: 1000px;
+}
+.event-details {
+  display: flex; // Makes it a flex container
+  align-items: center; // Centers children vertically
+  margin-bottom: 20px; // Adds space between each event item
+}
+.event-text {
+  // Now the text will align to the right of the image
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-icon {
+  font-size: 60px; // Adjust the size as needed
+  margin-right: 2%; // 2% from the right side
+  align-self: center; // Center vertically if needed
+  color: var(--lightBack)
+}
+
+
+
+.subheader {
+  height: 12%; // Adjust to match your design
+  display: flex;
+  align-items: center; // Vertically center the arrows
+  justify-content: space-between;
+
+}
+.subheader-icon{
+  margin-left: 3%;
+  height: 50%;
+}
+.subheader-title {
+  margin-left: 20px;
+  margin-right: 15px;
+  font-size: xx-large;
+  font-weight: 600;
+  color: white;
+  align-self: center;
+  white-space: nowrap; // This will prevent wrapping
+}
+.content {
+    height: 63%;
+    flex-grow: 1; /* Fill the available space */
+    display: flex; /* Switch to flex layout */
+    flex-direction: column; /* Stack children vertically, but we'll adjust this below */
+
+}
+
+  /* Each direct child of .content will be a flex container to layout image and text in a row */
+.content > div {
+    display: flex;
+    flex-direction: row; /* Ensure layout is horizontal */
+    align-items: center; /* Center items vertically */
+    margin: 10px 0; /* Add some margin between rows */
+}
+
+.info-name {
+    font-size: 150%; /* Make the name 1.5 times bigger */
+}
+
+.footer {
+    background-color: var(--lightBack); // Gray
+    height: 10%; // Adjust to match your design
+    display: flex;
+    align-items: center; // Vertically center the arrows
+    justify-content: space-between; // Push the arrows to the sides
+    padding: 0 3%; // Add some padding on the sides
+    flex-shrink: 0;
+}
+
+.footer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.footer button img {
+    height: 60%; /* The image will scale with the button */
+    width: auto; /* Maintain aspect ratio */
+}
+
+  /* You can specify a max-height if necessary, relative to your footer height */
+.footer button {
+    height: 60%; /* Example: button height is 70% of the footer height */
+    padding: 0; /* Reset padding */
+    display: flex;
+    align-items: center;
+}
+
+.footer-text {
+    margin-left: 15px;
+    margin-right: 15px;
+    color: var(--prevasBlue);
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.left-group {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 2%;
+    // If you want the icon and text to be closer, you can adjust the margin here
+  .subheader-icon {
+      margin-right: 10px; // Adjust as necessary
+  }
+
+    // No additional margin or padding needed for subheader-title unless desired for spacing
+}
+
+.right-group {
+    display: flex;
+    align-items: center;
+    margin-right: 3%;
+    // Adjust the gap between buttons if necessary
+  .business-button {
+      margin-left: 10px; // Adds space between buttons
+  }
+
+    // Apply the first button's margin-left as 0 if you don't want space before the first button
+  .button:first-child {
+      margin-left: 0;
+  }
+}
+
+
+.content-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will help with positioning the button */
+    align-items: center; /* To center-align the items */
+    padding: 20px;
+    // Add box shadow, border-radius, etc., as needed for styling
+}
+
+.content-image {
+    border-radius: 10px; /* Rounded corners */
+    margin-right: 50px; /* Space between image and text */
+    margin-left: 50px;
+    width: auto; /* Adjust based on your needs */
+    height: 350px; /* This sets a fixed height for the images */
+    object-fit: cover; /* This will ensure the image covers the area properly */
+
+}
+
+.content-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align text to center if there is space available */
+    overflow-y: auto; /* Allows vertical scrolling */
+    margin: 10px; /* Adjusts for spacing */
+    padding-right: 10px; /* Prevents scrollbar overlap on content */
+}
+
+.content-name {
+    font-family: 'Rokkitt', serif;
+    font-weight: 500; // Medium weight for the name
+    font-size: clamp(1.5rem, 3vw + 1rem, 3rem); /* Responsive font size between 1.5rem and 2.5rem */
+    margin-bottom: 3px;
+}
+
+.info-name {
+    color: var(--red);
+}
+
+.event-name {
+    color: var(--green);
+}
+
+.lab-name {
+    color: var(--orange);
+}
+
+.product-name {
+    color: var(--blue);
+}
+
+.business-name {
+    color: var(--gold);
+}
+.faq-name {
+  color: var(--purple);
+}
+.service-name {
+  color: var(--pink);
+}
+.quiz-name {
+  color: var(--brown);
+}
+.content-details p ul {
+    font-family: 'Rokkitt', serif;
+
+    color: var(--greyText);
+}
+
+.smaller-text {
+    font-weight: 400; // Regular weight for other text
+    font-size: 1.1rem; /* Responsive font size between 1rem and 1.25rem */
+    margin: 1px 0;
+}
+
+.larger-text {
+    font-weight: 400; // Regular weight for other text
+    font-size: 1.8rem; /* Responsive font size between 1rem and 1.25rem */
+    margin: 2px 0;
+}
+
+.content-link {
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: var(--prevasBlue);
+    border-style: solid; /* Add this to ensure the border is visible */
+    background-color: var(--lightBack);
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin-top: auto; /* Pushes the button towards the bottom */
+    position: relative; /* For offset positioning */
+    bottom: 8%; /* 20% from the bottom */
+    margin-right: 5%;
+    font-family: 'Rokkitt', serif;
+    font-weight: 400; // Regular weight for other text
+    font-size: clamp(1rem, 2vw + 0.5rem, 2rem); /* Responsive font size between 1rem and 1.25rem */
+    color: var(--prevasBlue);
+    /* Add border color, background color, etc., as needed */
+}
+
+.business-button {
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: white;
+    border-style: solid; /* Add this to ensure the border is visible */
+    background-color: var(--gold);
+    padding-left: 20px; /* Adjust padding as needed */
+    padding-right: 20px;
+    position: relative; /* For offset positioning */
+
+
+    font-family: 'Rokkitt', serif;
+    font-weight: 400; // Regular weight for other text
+    font-size: clamp(1rem, 2vw + 0.5rem, 2rem); /* Responsive font size between 1rem and 1.25rem */
+    color: white;
+    /* Add border color, background color, etc., as needed */
+}
+
+
+.event-image {
+    width: 100%; // This will make the image responsive to the container width
+    max-width: 300px; // Adjust to your preference
+    height: auto; // This will maintain the aspect ratio
+    margin: 0 auto; // This will center the image if within a flex container
+}
+
+
+
+// CUPBOARD SCREEN!!!!!!
+// CUPBOARD SCREEN!!!!!!
+
+@media (max-width: 768px) {
+  .row-layout-selection {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.row-layout-selection{
+  display: flex;
+  justify-content: center; /* Centrerar dropdown-listorna horisontellt */
+  gap: 10px; /* Lägger till lite utrymme mellan varje dropdown */
+  margin-bottom: 1%;
+  margin-top: -1.1%;
+}
+
+
+
+
+.cupboard-app{
+  min-height: 100vh; /* Minimum height to cover the viewport height */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height:100%;
+  width: 100%;
+  top:0;
+  left:0;
+
+}
+.cupboard-dropdown-container {
+  display: flex;
+  justify-content: space-around; /* Eller annan layout du föredrar */
+  padding: 10px 0; /* Ger lite utrymme ovan och under dropdown-menyn */
+  background-color: #f0f0f0; /* Eller någon annan färg du föredrar */
+  margin-left: -100px;
+
+}
+
+.cupboard-guest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black);
+  height: 18%; // Adjust to match your design
+}
+.cupboard-subheader {
+  background-color: var(--black);
+  height:2%;
+}
+.cupboard-subheader-size {
+  height: 2.5%; // Adjust to match your design
+}
+.cupboard-content-admin{
+
+}
+.cupboard-content {
+  flex-grow: 1; // Take up remaining space
+  //justify-content: flex-start; // This aligns items to the start of the container
+  //align-items: flex-start; // This keeps items aligned at their top edge
+  background-color: var(--lightBack);
+  padding-left: 50%;
+  margin: auto;
+  padding-top: 30px;
+
+  justify-content: center; /* Centrera innehållet horisontellt */
+  align-items: center;
+  display: grid;
+  flex-wrap: wrap;
+  min-width: 1000px;
+
+  grid-template-columns: repeat(2, 1fr); /* Skapar fyra kolumner */
+  grid-template-rows: auto; /* Skapar fyra rader */
+  //gap: 2px; /* Mellanrum mellan korten */
+  //padding: 20px;
+  //background-color: var(--lightBack);
+
+  gap: 5px;
+}
+.cupboard-row {
+  display: flex;
+  margin-left: -300px;
+  justify-content: center;
+
+  gap: 0.5%; /* Justera gapet mellan korten efter behov */
+}
+.full-card { flex:  0 100% }
+.half-card { flex: 0 0 55% } /* Antag att gapet är runt 4%, vilket ger 48% för att passa två halvkort */
+.three-quarters-card { flex: 0 0 80%; } /* Anpassa procent efter gap */
+.single-card { flex: 0 0 23%; } /* Anpassa för att passa fyra kort med gap */
+
+
+.white-card {
+  width: 80%; /* Exempel på bredd */
+  height: 150px; /* Exempel på höjd */
+  margin: 17px; /* Extra mellanrum */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lägg till skugga för bättre synlighet */
+  transition: transform 0.3s; /* Glidande effekt vid hover */
+
+}
+
+.white-card.third-card:hover {
+  transform: scale(1.05); /* Lätt förstoring när musen är över kortet */
+}
+
+.cupboard-text {
+  // To make the image smaller, adjust the width and ensure height is auto to maintain aspect ratio
+  width: 40%; // Or any size that fits your design
+  height: auto;
+  margin-top: 1%;
+  margin-left: auto; // This will push the home icon to the right.
+  margin-right: 40px; // Or any value to place it properly
+}
+
+.cupboard-card{
+  cursor: pointer;
+  //flex-basis: calc(50% - 50px);
+  // height: 0px;
+  height: 40px;
+  width: 25%;/* Ajustera för 'gap' eller 'margin' mellan kort */
+  margin: -20px; /* Justera detta värde för att kontrollera mellanrummet mellan korten */
+  position: relative;
+
+
+
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  //overflow: hidden;
+}
+
+.long-card {
+  flex-basis: 91%; /* Full bredd */
+  height: 145px; /* Justera höjden för att göra kortet smalare */
+  margin: 10px 55px;
+
+  background-color: #fff; /* Anpassa bakgrundsfärgen */
+  display: flex;
+  justify-content: center; /* Centrerar innehållet horisontellt */
+  align-items: center; /* Centrerar innehållet vertikalt */
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  position: relative;
+  left: 0%;
+
+}
+
+.half-card {
+  flex-basis: 45%; /* Halv bredd */
+  height: 145px; /* Samma höjd som long-card */
+  margin: 10px 27.5px; /* Justerad margin för att centrerar kortet */
+
+  background-color: #fff; /* Samma bakgrundsfärg som long-card */
+  display: flex;
+  justify-content: center; /* Centrerar innehållet horisontellt */
+  align-items: center; /* Centrerar innehållet vertikalt */
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  position: relative;
+  left: 0%; /* Justerad för att centrera kortet i förhållande till dess nya bredd */
+}
+
+.three-quarters-card {
+  flex-basis: 68%; /* Tre fjärdedelar bredd */
+  height: 145px; /* Samma höjd som long-card */
+  margin: 10px; /* Kan justeras efter behov */
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+
+}
+
+
+.card-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Se till att bakgrundsbilden täcker hela kortet */
+}
+
+.white-card {
+  background-color: #17a2cc;
+  border-radius: 8px; /* Runda hörnen */
+  width: 310px; /* Bredd på kortet */
+  height: 145px; /* Höjd på kortet */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Lite skugga för djup */
+  margin: 10px; /* Marginal runt kortet */
+  display: flex; /* Centrera innehållet vertikalt och horisontellt */
+  align-items: center; /* Centrera innehållet vertikalt */
+  justify-content: center; /* Centrera innehållet horisontellt */
+  border-radius: 30px;
+
+  position: relative;
+
+}
+.white-card, .long-card {
+  /* befintliga stilar */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Lägg till en mjuk övergång */
+  cursor: pointer; /* Ändrar muspekaren för att indikera klickbarhet */
+}
+
+.white-card:hover, .long-card:hover {
+  transform: scale(1.03); /* Skalar upp kortet lite för att indikera interaktivitet */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Lägger till en större skugga när kortet hovras över */
+}
+
+
+
+.cupboard-card4 {
+  width: 90%; /* Full width */
+  height: 10px; /* Adjust height as needed */
+  margin: -15px ; /* Top and bottom margin, no left-right margin */
+}
+
+.cupboard-number{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -100%);
+  /* Add styles for font size, color, etc. */
+
+
+}
+
+.cupboard-product-dropdown {
+  position: absolute; /* or relative depending on your layout */
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  z-index: 10; /* Ensure it's above other content */
+}
+
+/* Style the dropdown */
+.cupboard-product-dropdown select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  /* Add any other styles for your dropdown */
+}
+
+.card-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Se till att bakgrundsbilden täcker hela kortet */
+}
+
+.product-image {
+  width: 32%; /* or any percentage you wish */
+  height: 70%;
+  object-fit: cover; /* or cover, depending on your needs */
+  transform: translateY(-4%);
+  position: absolute;
+  left: 5%;
+  border-radius: 15px;
+
+}
+.card-info {
+  position: absolute; /* Overlay info on the image */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-action {
+  display: block;
+  padding: 10px 20px;
+  background-color: #0062cc; /* Change to your brand color */
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+  border-radius: 20px; /* Rounded edges for the button */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.cupboard-image-size{
+  width: 10px;
+  height: 10px
+}
+// END OF CUPBOARD SCREEN!!!!!
+
+
+
+
+
+
+// CUPBOARDSCREEN GUEST!!
+.guest-cupboard-cards{
+  width: 50%;
+  margin-top: 2%;
+  align-self: center;
+}
+.guest-cupboard-app {
+  min-height: 100vh; /* Minimum height to cover the viewport height */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--lightBack); /* Använd din 'lightback' färg här */
+
+}
+
+
+/* Andra stilar kvarstår oförändrade, bara uppdatera klassnamn prefix från 'cupboard' till 'guest-cupboard' där det behövs */
+
+.guest-cupboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Minska gap för att trycka ihop korten lite */
+}
+
+.guest-white-card {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 300px; /* Justera bredden för att trycka ihop korten om det behövs */
+  height: 140px; /* Justera höjden efter behov */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 5px; /* Minska marginalen för att korten ska vara närmare varandra */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.guest-white-card:hover, .guest-long-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/*
+
+GUESTCUPBOARD SCREEN ENDS!!
+
+ */
+
+
+
+
+
+
+
+
+
+.search-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrerar sökcontainer */
+  text-align: center;
+}
+
+
+
+
+
+.product-header {
+    background-color: var(--blue);
+}
+
+
+/* MenuScreen.css */
+
+.menuScreen-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.menuScreen-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.navbar-menuScreen {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  width: calc(100% - 200px); /* Justera bredden för att inkludera logon och widget */
+  display: flex;
+  align-items: center; /* Justera vertikalt centrerad */
+  justify-content: space-between;
+  padding: 30px;
+  z-index: 10; /* Säkerställer att navbar ligger ovanpå bakgrundsbilden */
+}
+
+
+.container-nav {
+  display: flex; /* Exempel: gör så att innehållet i containern anordnas flexibelt */
+  align-items: center; /* Centrerar innehållet vertikalt */
+  justify-content: space-between; /* Fördelar utrymmet mellan barnen */
+}
+
+.logo-prevas-icon {
+  height: 60px; /* Anger höjden på logotypen */
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)); /* Lägger till en skugga runt logotypen */
+}
+
+.prevas-icon-container {
+  position: absolute;
+  top: 40px;
+}
+
+.weather-widget-container {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+.widget-compact-view {
+  position: absolute; /* Ändrat till absolut positionering */
+  right: 20px;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  font-family: 'Rokkitt', serif;
+  font-size: 20px;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.widget-compact-view .temp,
+.widget-compact-view .weatherDescription,
+.widget-compact-view .time {
+  margin: 0 10px;
+}
+
+.widget-compact-view .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.logo-settings-container {
+  position: absolute;
+  right: 5px;
+  top: 65px;
+}
+
+.settings-logo {
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.settings-logo:hover {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)); /* Ändrar skuggan för att ge en hover-effekt */
+}
+
+.settings-logo:active {
+  transform: scale(0.95); /* Minskar storleken lite för att simulera en "tryck"-effekt */
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.10)); /* Gör skuggan tätare och närmare för att förstärka effekten */
+}
+
+
+.main-content {
+  padding: 10px; /* Ger utrymme runt innehållet */
+  max-width: 1200px; /* Begränsar innehållets bredd för större skärmar */
+  margin: auto; /* Centrerar innehållet horisontellt */
+}
+
+.all-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.montern-button {
+  width: 85.5%; /* Behåller bildens fulla bredd */
+  height: auto; /* Anpassar höjden för att bevara bildens proportioner */
+  transform: translateX(15px);
+}
+
+.home-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block; /* Behåller kontroll över layouten */
+  transition: transform 0.3s ease;
+}
+
+.home-button img {
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smidig övergång för transform och filter */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+.home-button:hover img {
+  transform: scale(1.01); /* Minskar skalningsökningen för en subtilare effekt */
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.8)); /* Gör skuggan mindre framträdande */
+}
+
+.home-button:active img {
+  transform: scale(0.99); /* Subtil intryckningseffekt */
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.10)); /* Mindre skugga vid intryckning */
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto); /* Storleken på raderna anpassas efter innehållet */
+}
+
+.buttons-grid img {
+  width: 100%;
+  object-fit: contain; /* Ser till att hela bilden är synlig */
+  display: block;
+}
+
+
+/* officeMap.css */
+
+.left-side {
+  flex: 40%; /* Tar upp 40% av containerns totala bredd */
+}
+
+.office-map-container {
+  display: flex;
+  height: 100%; /* Anpassar till en skärm med höjden 900px */
+  width: 100%; /* Bredden anpassar sig till skärmens bredd */
+  position: fixed;
+  left:0;
+  top:0;
+}
+
+
+.header-office {
+  text-align: center;
+  background-color: var(--prevasBlue);
+  padding: 30px 0;
+
+}
+
+.logo-prevas {
+  width: calc(100% - 20%); /* 100% av containerns bredd minus 20% för att lämna 10% på varje sida */
+  height: auto; /* Bibehåller bildens proportioner */
+  margin: 0 10%; /* Lägger till 10% marginal på både vänster och höger sida */
+}
+
+.subheaderOffice {
+  display: flex; /* Detta gör att innehållet i .subheaderOffice arrangeras i en rad */
+  align-items: center; /* Centrerar innehållet vertikalt */
+  justify-content: flex-start; /* Flyttar innehållet till vänster */
+  text-align: left; /* Startar texten från vänster, efter ikonen */
+  background-color: var(--yellow); /* Din önskade bakgrundsfärg */
+  color: #ffffff; /* Din önskade textfärg */
+  padding: 30px 30px 30px 70px; /* Minskar vänster padding */
+  font-family: 'Rokkitt', serif;
+}
+
+
+.find-office-icon {
+  height: 3.5em; /* Exempelstorlek, anpassa efter behov */
+  margin-right: 0.5em; /* Lägger till lite utrymme mellan ikonen och texten */
+}
+
+.subheaderOffice-text {
+  margin: 0; /* Tar bort standardmarginalen */
+  font-size: 44px;
+}
+
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Se till att elementen fördelas jämnt */
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.icon-group {
+  width: calc(50% - 10px); /* Tar hänsyn till eventuell marginal */
+  display: flex;
+  align-items: center; /* Centrerar innehållet vertikalt */
+  margin-bottom: 30px; /* Lägger till utrymme mellan raderna */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+
+}
+
+.icon-group .icon {
+  width: auto; /* Anpassar bredden automatiskt */
+  height: 3em; /* Exempel på ikonens höjd, anpassa efter dina behov */
+  margin-right: 8px; /* Mellanrum mellan ikon och text */
+}
+
+.icon-title {
+  cursor: pointer;
+  text-align: center; /* Centrerar titeln under ikonen */
+  color: var(--greyText); /* Exempel på färg, ändra till det som passar din design */
+  font-size: 24px; /* Exempel på textstorlek, justera efter behov */
+  font-family: 'Rokkitt', serif; /* Ändra till din önskade font */
+}
+
+.icon-group img {
+  cursor: pointer;
+  width: 48%; /* Bredden för varje ikon */
+  height: 50%;
+}
+
+
+.workspace-details {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--blue);
+  column-gap: 25px;
+  line-height: 1.8;
+  display: grid;
+  grid-template-rows: repeat(6, auto); /* Skapar sex rader */
+  grid-auto-flow: column; /* Fyller griden kolumnvis */
+  padding-left: 65px; /* Justerar placeringen åt höger */
+  font-family: 'Rokkitt', serif;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.conference-details {
+  cursor: pointer;
+  line-height: 1.8;
+  font-size: 20px;
+  font-weight: bold;
+
+  color: var(--yellow);
+  padding-right: 80px; /* Flyttar texterna lite åt höger, för konsistens */
+  font-family: 'Rokkitt', serif;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+
+}
+
+
+
+.right-side {
+  position: relative;
+  flex: 60%; /* Tar upp 60% av containerns totala bredd */
+  background-color: var(--gray); /* Sätter höger sida till grå färg */
+}
+
+.right-side img {
+  width: 100%;
+  height: auto;
+  background-color: var(--gray);
+
+}
+
+.homeButton-Office {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  top: 40px; /* Lägger till 10px marginal från toppen */
+  left: 30px; /* Lägger till 10px marginal från vänster */
+}
+
+.homeButton-Office img {
+  display: block; /* Tar bort eventuellt extra utrymme under bilden */
+  width: 100%; /* Justera efter behov */
+  height: auto; /* Behåller bildens proportioner */
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px; /* Justera utrymmet runt kartan efter behov */
+  box-sizing: border-box; /* Se till att padding inte påverkar den totala bredden */
+  display: flex; /* Använder flexbox för att centrera bilden både vertikalt och horisontellt */
+  justify-content: center;
+  align-items: center;
+}
+
+.officeMap-picture {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Ser till att bilden anpassas korrekt utan att klippas eller förvrängas */
+}
+
+@keyframes pulse-ring {
+  0%, 1% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  80% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+
+.blink-marker {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid red;
+  animation: pulse-ring 1.5s infinite linear;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+
+
+.lab-header {
+    background-color: var(--orange);
+}
+
+.quiz-header {
+    background-color: var(--brown);
+}
+
+.business-header {
+    background-color: var(--gold);
+}
+
+.info-header {
+    background-color: var(--red); // Red/Orange
+}
+
+.event-header {
+    background-color: var(--green); // Red/Orange
+}
+
+.faq-header {
+    background-color: var(--purple);
+}
+
+.service-header {
+    background-color: var(--pink);
+}
+
+.single-side {
+    display: flex;
+    align-items: center;
+    // Justify content isn't necessary because flex-start is default
+    // but you can explicitly set it for readability
+    justify-content: flex-start;
+
+  .subheader-icon {
+      margin-right: 10px; // Adjust as necessary
+  }
+
+  .subheader-title {
+      // No additional styles needed unless you want specific margins or padding
+  }
+}
+
+  // QuizButtonStyles.scss
+.quiz-button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-color: #1a1a1a;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+  &:hover {
+    background-color: var(--brown);
+  }
+
+  &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, .5);
+  }
+
+  &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+  }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); // semi-transparent background
+    backdrop-filter: blur(5px); // blur effect
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; // ensure it's above other content
+}
+
+.modal-content {
+    background-color: var(--lightBack);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto; // in case content is too long
+    z-index: 1001; // above the overlay
+    display: flex;
+    flex-direction: column; // Stack children vertically
+}
+
+  // Add to your SCSS file
+.answer-feedback {
+    position: relative; // No longer absolutely positioned
+    width: auto; // Take the natural width of the content
+    margin-bottom: 20px; // Space between the text and the image
+
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 20px;
+    border-radius: 0 0 5px 5px; // Rounded corners at the bottom
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+
+
+  &.green {
+      color: green;
+  }
+
+  &.red {
+      color: red;
+  }
+}
+
+.organization-image {
+    height: 98%;
+    width: 90%;
+    align-self: center;
+}
+
+  //DELETE AND ADD CSS
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input, .submit-button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+.past-event {
+position: relative;
+}
+.past-event::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/expired.webp'); /* Adjust the path as needed */
+  background-size: 30%;
+  background-position: center;
+  opacity: 0.3; /* Set the opacity of the background image */
+  z-index: -1; /* Ensure the background is behind the content */
+}
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+.keyboard-container {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 1000; /* Ensure it's above most other elements */
+  text-align: center; /* Ensure that the content inside is centered */
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.key {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.key.close, .toggle-button {
+  background-color: gray; /* Red for the close button */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.logout-button{
+  z-index: 1000;
+}
+
+/* Ensure the toggle-button is styled similar to the close button for consistency */
+
+
+.navbar-container {
+  position: fixed; /* Fixed at the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Start from the left */
+  width: 100%; /* Span the full width of the viewport */
+  display: flex;
+  z-index: 1000;/* Use flexbox for horizontal alignment */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically within the nav */
+  padding: 10px 0; /* Add some padding at the top and bottom */
+}
+
+.navbar-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #007bff; /* Adjust if you're using a gradient instead */
+  background-image: linear-gradient(to top left, #007bff, #0056b3); /* subtle gradient */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 10px 1%;
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions for transform and shadow */
+  font-size: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* stronger shadow for depth */
+  border: 1px solid #004085; /* subtle border for added depth */
+}
+
+.navbar-button:hover {
+  transform: scale(1.05); /* Slightly larger on hover for a "press" effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* deeper shadow on hover */
+  background-image: linear-gradient(to top left, #0056b3, #004095); /* adjust gradient for hover */
+}
+.main-content-admin{
+  margin-top:20%;
+  margin-bottom: 26%;
+}
+.main-content2 {
+  padding-top: 15%; /* Creates space above your text */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Adjust width as needed */
+  margin: auto;
+}
+
+.text-background {
+  background-color: rgba(240, 240, 240, 0.7); /* Light grey background with 80% opacity */
+  padding: 20px; /* Add some padding inside the div */
+  border-radius: 15px; /* Optional: adds rounded corners to the div */
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+}
+.background-image-container {
+  background-size: 100%; /* Maintain the image's original size */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center center; /* Center the image */
+  width: 100%; /* Cover the width of the parent */
+  height: 100vh; /* Cover the height of the viewport */
+  position: fixed; /* Ensure it covers the entire viewport */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure it stays behind other content */
+}
+.key.space {
+  flex-grow: 1; /* Make the space key grow to fill the available space */
+  text-align: center; /* Center the text (space character) within the button */
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center; /* Center keys in the row */
+  width: 100%; /* Make sure rows span the full width of the keyboard */
+}
+/* Login Container */
+.login-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Login Form */
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-form button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Error Message */
+.error-message {
+  margin-top: 1rem;
+  color: #f44336;
+  text-align: center;
+}
+
+/* Additional Styling */
+h2 {
+  margin-bottom: 2rem;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  background-color: #4e5d6c; /* Dark grey background */
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  font-size: 24px; /* Adjust the size of the arrow icon/text if needed */
+  z-index: 10;
+  padding: 10px; /* Adjust padding to create a circular shape */
+  color: white; /* White color for the arrow icon/text */
+  border-radius: 50%; /* Makes the background a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+}
+
+.left-arrow {
+  left: 30px; /* Distance from the left edge */
+}
+
+.right-arrow {
+  right: 30px; /* Distance from the right edge */
+}
+
+.content-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+// ProductDetailScreen.scss
+
+.productDetail-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.productDetail-title {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: 'Rokkitt', serif;
+}
+
+.productDetail-body {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.productDetail-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productDetail-image {
+  max-width: 100%;
+  max-height: 300px; /* Anpassa detta värde efter dina behov */
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.productDetail-info-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productDetail-info {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.5;
+  font-family: 'Rokkitt', serif;
+  margin-left: 30px; /* Flytta texten åt höger */
+}
+
+
+.modal-content {
+  position: relative;
+  border-radius: 10px;
+  /* Dina befintliga stilar */
+}
+
+.image-navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrerar bilden */
+}
+
+.modal-image {
+  /* Anpassa enligt behov */
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  margin: 20px auto; /* Centrerar bilden */
+  border-radius: 10px;
+}
+
+.modal-text-content {
+  max-width: 90%; /* Anpassa efter din modal-image bredd eller enligt behov */
+  margin: 20px auto; /* Centrerar texten inuti modalen */
+  text-align: left; /* Eller 'center', beroende på önskad justering */
+}
+
+@media (max-width: 600px) {
+  .modal-text-content {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+}
+
+.navigation-button {
+  position: absolute;
+  top: 40%; /* Centrerar knapparna vertikalt */
+  transform: translateY(-50%); /* Justerar för knapparnas höjd */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.left {
+  position: absolute;
+  left: 10px; /* Justera avståndet från kanten */
+  color: #999999;
+
+}
+
+.right {
+  position: absolute;
+  right: 10px; /* Justera avståndet från kanten */
+  color: #999999;
+}
+
+
+.cupboardbox-card-single {
+  width: 100px; /* Adjust size accordingly */
+  height: 100px; /* Adjust size accordingly */
+  background-color: white;
+}
+.cupboardbox-card-half {
+  width: 200px; /* Adjust size accordingly */
+  height: 100px; /* Adjust size accordingly */
+  background-color: white;
+}
+
+.cupboardbox-card-third {
+  width: 300px; /* Adjust size accordingly */
+  height: 100px; /* Adjust size accordingly */
+  background-color: white;
+}
+
+.cupboardbox-card-full {
+  width: 400px; /* Adjust size accordingly */
+  height: 100px; /* Adjust size accordingly */
+  background-color: white;
+}
+
+.cupboardbox-card-selected {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-color: black;
+  background-color: lightgray;
+}
+
+.cupboardbox-card-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cupboardbox-card-title {
+  font-weight: bold;
+}
+.cupboardbox-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+  grid-gap: 10px; /* Adjust the gap size as needed */
+  margin-bottom: 30px; /* Space below the dropdown */
+  padding: 1%;
+  background-color: #9eeaf9;
+}
+
+.cupboardbox-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  height: 100px; /* Fixed height, or make it responsive as needed */
+}
+
+/* CupboardScreen.css */
+
+.cupboard-app {
+ width: 90%;
+}
+
+.cupboard-header {
+margin-bottom: 1%;
+
+}
+
+.cupboard-content {
+  /* Styles for the main content area */
+  padding: 16px;
+}
+
+.cupboardbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between rows */
+}
+
+.cupboardbox-row {
+  display: flex;
+  gap: 10px; /* Space between cards within a row */
+}
+/* Styles for Card component */
+.card {
+  /* Base styles for Card */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Additional specific styles for card sizes */
+.card-single {
+  flex: 1;
+}
+
+.card-half {
+  flex: 2;
+}
+
+.card-third {
+  flex: 3;
+}
+
+.card-full {
+  flex: 4;
+}
+
+.card-selected {
+  border-color: blue;
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-top: 8px;
+}
+.navbar-phone-container {
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.navbar-phone {
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch; /* For momentum-based scrolling on iOS */
+}
+
+.navbar-phone-button {
+  flex: 0 0 auto; /* Do not grow or shrink, but allow basis to be auto */
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #fff; /* Solid background for buttons */
+  border-radius: 25px;
+  text-align: center;
+  white-space: nowrap; /* Prevent wrapping of text in buttons */
+}
+
+
+
+
+/* This will apply to screens narrower than or equal to 768px */
+@media (max-width: 768px) {
+  .keyboard-container{
+    display: none;
+  }
+  .logout-button{
+    display: none;
+  }
+  .login-home{
+    display: none;
+  }
+}
+
+/* src/Board.css */
+/* src/Board.css */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(8, 200px);
+  grid-gap: 8px;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.game-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Added solid for clarity */
+  border: 2px;
+  border-radius: 15px;
+  height: 200px;
+}
+
+.game-image {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Uniform transition duration */
+}
+
+.game-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.moving-tile {
+  transition: transform 0.75s ease-in-out; /* Make sure this is consistent with .game-image if used */
+}
+
+.game-image:active, .game-image:focus {
+  opacity: 0.5; /* Visual cue during drag */
+  transform: scale(1.1); /* Scale up when dragging */
+}
+.game-square:active{
+  background-color: lightgrey;
+}
+
+.game-square.over {
+  border-color: #ffa500; /* Highlight potential drop targets */
+  background-color: #f0f0f0; /* Change background color when hovered over */
+}
+.card-title {
+
+  bottom: 10px;
+
+  font-size: 20px; /* Larger text */
+  flex-grow: 1;
+  text-align: right; /* Align text to the left */
+
+
+
+
+  color: white; /* Vit textfärg för kontrast mot eventuell mörk bakgrund */
+  padding: 5px 10px;
+
+
+  max-width: 90%; /* Förhindrar att texten går utanför kortet */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Ser till att texten inte bryts */
+}
+.white-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: auto; /* adjust as necessary */
+  height: 100%; /* maintain aspect ratio */
+}
+
+.card-title {
+  position: absolute;
+  bottom: 10px; /* adjust as necessary */
+  right: 10px; /* adjust as necessary */
+  color: white; /* adjust as necessary */
+  background-color: rgba(0,0,0,0.5); /* semi-transparent background */
+  padding: 5px;
+}
